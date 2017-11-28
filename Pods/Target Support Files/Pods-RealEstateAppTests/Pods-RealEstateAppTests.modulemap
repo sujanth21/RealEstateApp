@@ -1,0 +1,6 @@
+framework module Pods_RealEstateAppTests {
+  umbrella header "Pods-RealEstateAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>710475181598-7rgvamchqtdjp1bt7qm4d85rab74e3rv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.710475181598-7rgvamchqtdjp1bt7qm4d85rab74e3rv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD7Q709T-ho2eoQR7kg7UwC4fNNkbVx2e4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>710475181598</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.sujanth.RealEstateApp</string>
+	<key>PROJECT_ID</key>
+	<string>realestateapp-69d5d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>realestateapp-69d5d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:710475181598:ios:5073835d983e3be8</string>
+	<key>DATABASE_URL</key>
+	<string>https://realestateapp-69d5d.firebaseio.com</string>
+</dict>
+</plist>
