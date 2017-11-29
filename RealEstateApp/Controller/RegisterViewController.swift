@@ -10,26 +10,41 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+    //Phone register outlets
+    @IBOutlet weak var phoneNumberTxtFld: UITextField!
+    @IBOutlet weak var codeTxtFld: UITextField!
+    @IBOutlet weak var requestCodeBtn: RoundedCornerButton!
+    
+    //Email register outlets
+    @IBOutlet weak var emailTxtFld: UITextField!
+    @IBOutlet weak var firstNameTxtFld: UITextField!
+    @IBOutlet weak var lastNameTxtFld: UITextField!
+    @IBOutlet weak var passwordTxtFld: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    //MARK:- IBActions
+    
+    @IBAction func requestCodeBtnPressed(_ sender: Any) {
+    }
+    
+    
+    @IBAction func registerEmailBtnPressed(_ sender: Any) {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func closeBtnPressed(_ sender: Any) {
+        
+        let mainView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainVC") as! UITabBarController
+        
+        self.present(mainView, animated: true, completion: nil)
     }
-    */
+    
 
 }

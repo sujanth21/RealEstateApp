@@ -15,6 +15,39 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="aqi-dk-1FW">
+            <objects>
+                <tabBarController storyboardIdentifier="mainVC" id="2PV-wH-4mh" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ta9-Ss-PT0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fQO-eC-QHq" kind="relationship" relationship="viewControllers" id="nqA-bk-EwL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9r0-da-dnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1638" y="682"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="04c-nh-csn">
+            <objects>
+                <viewController id="fQO-eC-QHq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eis-Ns-7Ps">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.91918826099999995" green="0.31992363930000001" blue="0.32238131759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Nyb-fy-PZl"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Nwi-Uj-bll"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wUM-jJ-g3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-726" y="421"/>
+        </scene>
         <!--Register View Controller-->
         <scene sceneID="INj-UL-d7K">
             <objects>
@@ -39,6 +72,9 @@
                                     <constraint firstAttribute="width" constant="40" id="ikf-04-ecV"/>
                                 </constraints>
                                 <state key="normal" image="ic_signup_close"/>
+                                <connections>
+                                    <action selector="closeBtnPressed:" destination="0KF-fV-i3f" eventType="touchUpInside" id="IPc-E2-pkp"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ucF-mq-Tpj">
                                 <rect key="frame" x="16" y="185" width="343" height="86"/>
@@ -67,6 +103,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="requestCodeBtnPressed:" destination="0KF-fV-i3f" eventType="touchUpInside" id="Hv0-g3-TXb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -115,6 +154,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="registerEmailBtnPressed:" destination="0KF-fV-i3f" eventType="touchUpInside" id="iwL-Ih-hQu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -140,10 +182,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="03v-AJ-J7h"/>
                     </view>
+                    <connections>
+                        <outlet property="codeTxtFld" destination="Rur-u1-QhR" id="5Bg-2w-1oo"/>
+                        <outlet property="emailTxtFld" destination="9nv-NK-WDN" id="rCA-KN-9XN"/>
+                        <outlet property="firstNameTxtFld" destination="cnY-61-RiA" id="dxw-j1-h7T"/>
+                        <outlet property="lastNameTxtFld" destination="Xm5-Zr-ZAg" id="L2t-p3-9qf"/>
+                        <outlet property="passwordTxtFld" destination="jML-Bi-hya" id="cs3-Hn-fs8"/>
+                        <outlet property="phoneNumberTxtFld" destination="C3n-Ty-4HS" id="fKy-00-mcM"/>
+                        <outlet property="requestCodeBtn" destination="PSG-JE-8kG" id="VIx-d3-bPj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hDy-1l-Dx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-32.799999999999997" y="36.431784107946029"/>
+            <point key="canvasLocation" x="-1639" y="-27"/>
         </scene>
     </scenes>
     <resources>
