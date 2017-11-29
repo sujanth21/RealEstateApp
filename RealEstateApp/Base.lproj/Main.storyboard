@@ -10,6 +10,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
             <string>AvenirNext-DemiBold</string>
         </array>
     </customFonts>
@@ -23,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register to use all the features of the application" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ah-Mo-VSY">
-                                <rect key="frame" x="66" y="70" width="243" height="60"/>
+                                <rect key="frame" x="66" y="90" width="243" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="r1A-0p-dBS"/>
                                 </constraints>
@@ -39,42 +40,103 @@
                                 </constraints>
                                 <state key="normal" image="ic_signup_close"/>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ucF-mq-Tpj">
-                                <rect key="frame" x="16" y="165" width="343" height="112"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ucF-mq-Tpj">
+                                <rect key="frame" x="16" y="185" width="343" height="86"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the phone number with country code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C3n-Ty-4HS">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the phone number with country code" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="C3n-Ty-4HS">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rur-u1-QhR">
-                                        <rect key="frame" x="0.0" y="36" width="343" height="30"/>
+                                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the code" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Rur-u1-QhR">
+                                        <rect key="frame" x="0.0" y="43" width="343" height="0.0"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSG-JE-8kG">
-                                        <rect key="frame" x="0.0" y="72" width="343" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSG-JE-8kG" customClass="RoundedCornerButton" customModule="RealEstateApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="46" width="343" height="40"/>
                                         <color key="backgroundColor" red="0.91918826103210449" green="0.31992363929748535" blue="0.32238131761550903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                         <state key="normal" title="Request Code">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1V-kA-ZBN">
+                                <rect key="frame" x="173.5" y="291" width="27.5" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mzf-oF-Ueb">
+                                <rect key="frame" x="16" y="356" width="343" height="250"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email here..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9nv-NK-WDN">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="46"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter first name here..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cnY-61-RiA">
+                                        <rect key="frame" x="0.0" y="51" width="343" height="46"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter last name here..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xm5-Zr-ZAg">
+                                        <rect key="frame" x="0.0" y="102" width="343" height="46"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password here..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jML-Bi-hya">
+                                        <rect key="frame" x="0.0" y="153" width="343" height="46"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hq-hD-F2n" customClass="RoundedCornerButton" customModule="RealEstateApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="204" width="343" height="46"/>
+                                        <color key="backgroundColor" red="0.91918826099999995" green="0.31992363930000001" blue="0.32238131759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                        <state key="normal" title="Register">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="liT-Em-Iw0"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="03v-AJ-J7h" firstAttribute="trailing" secondItem="3Ah-Mo-VSY" secondAttribute="trailing" constant="66" id="0Dc-BS-WDx"/>
+                            <constraint firstItem="s1V-kA-ZBN" firstAttribute="top" secondItem="ucF-mq-Tpj" secondAttribute="bottom" constant="20" id="Avo-IJ-8hb"/>
+                            <constraint firstItem="mzf-oF-Ueb" firstAttribute="top" secondItem="s1V-kA-ZBN" secondAttribute="bottom" constant="40" id="EMH-yt-8VG"/>
                             <constraint firstItem="03v-AJ-J7h" firstAttribute="trailing" secondItem="Xdw-Ws-3Pl" secondAttribute="trailing" constant="16" id="Hek-bD-h3a"/>
                             <constraint firstItem="3Ah-Mo-VSY" firstAttribute="leading" secondItem="03v-AJ-J7h" secondAttribute="leading" constant="66" id="ORY-px-Gto"/>
                             <constraint firstItem="ucF-mq-Tpj" firstAttribute="leading" secondItem="03v-AJ-J7h" secondAttribute="leading" constant="16" id="PXJ-zK-bYz"/>
-                            <constraint firstItem="3Ah-Mo-VSY" firstAttribute="top" secondItem="03v-AJ-J7h" secondAttribute="top" constant="50" id="Wie-XS-mtr"/>
+                            <constraint firstItem="3Ah-Mo-VSY" firstAttribute="top" secondItem="03v-AJ-J7h" secondAttribute="top" constant="70" id="Wie-XS-mtr"/>
                             <constraint firstItem="03v-AJ-J7h" firstAttribute="trailing" secondItem="ucF-mq-Tpj" secondAttribute="trailing" constant="16" id="YHv-zX-WaW"/>
+                            <constraint firstItem="s1V-kA-ZBN" firstAttribute="centerX" secondItem="zub-rk-qYu" secondAttribute="centerX" id="kQx-0n-7Xe"/>
                             <constraint firstItem="Xdw-Ws-3Pl" firstAttribute="top" secondItem="03v-AJ-J7h" secondAttribute="top" id="u30-Uz-oBQ"/>
+                            <constraint firstItem="03v-AJ-J7h" firstAttribute="trailing" secondItem="mzf-oF-Ueb" secondAttribute="trailing" constant="16" id="voE-n7-gKm"/>
                             <constraint firstItem="ucF-mq-Tpj" firstAttribute="top" secondItem="3Ah-Mo-VSY" secondAttribute="bottom" constant="35" id="vtt-TC-3Hj"/>
+                            <constraint firstItem="mzf-oF-Ueb" firstAttribute="leading" secondItem="03v-AJ-J7h" secondAttribute="leading" constant="16" id="xMO-oI-fO1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="03v-AJ-J7h"/>
                     </view>

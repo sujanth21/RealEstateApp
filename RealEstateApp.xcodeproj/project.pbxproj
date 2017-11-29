@@ -17,6 +17,8 @@
 		83CC25E91FCC0F3C00C6F645 /* RealEstateAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC25E81FCC0F3C00C6F645 /* RealEstateAppUITests.swift */; };
 		83CC25FF1FCD6DED00C6F645 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC25FE1FCD6DED00C6F645 /* Constants.swift */; };
 		83CC26011FCE084300C6F645 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC26001FCE084300C6F645 /* RegisterViewController.swift */; };
+		83CC26041FCE493900C6F645 /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC26031FCE493900C6F645 /* RoundedCornerButton.swift */; };
+		83CC26061FCE4ACA00C6F645 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83CC26051FCE4ACA00C6F645 /* GoogleService-Info.plist */; };
 		B32499A2740AF8623FDBD47A /* Pods_RealEstateApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B9F2603EE211CF345DB1C5 /* Pods_RealEstateApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,10 +54,11 @@
 		83CC25E41FCC0F3C00C6F645 /* RealEstateAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealEstateAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CC25E81FCC0F3C00C6F645 /* RealEstateAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealEstateAppUITests.swift; sourceTree = "<group>"; };
 		83CC25EA1FCC0F3C00C6F645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83CC25F61FCC10BB00C6F645 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		83CC25F71FCD667200C6F645 /* RealEstateApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RealEstateApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		83CC25FE1FCD6DED00C6F645 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		83CC26001FCE084300C6F645 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		83CC26031FCE493900C6F645 /* RoundedCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
+		83CC26051FCE4ACA00C6F645 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A1B9F2603EE211CF345DB1C5 /* Pods_RealEstateApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealEstateApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBAD0A33A9373ECC7D60C1AC /* Pods_RealEstateAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealEstateAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C621ACC99F51BD0C8DCD5B24 /* Pods-RealEstateAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealEstateAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealEstateAppUITests/Pods-RealEstateAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,13 +131,13 @@
 		83CC25C71FCC0F3B00C6F645 /* RealEstateApp */ = {
 			isa = PBXGroup;
 			children = (
+				83CC26051FCE4ACA00C6F645 /* GoogleService-Info.plist */,
 				83CC26021FCE085000C6F645 /* Supporting Files */,
 				83CC25FD1FCD6DC400C6F645 /* View */,
 				83CC25FC1FCD6DBB00C6F645 /* Model */,
 				83CC25FB1FCD6DAF00C6F645 /* Controller */,
 				83CC25CC1FCC0F3B00C6F645 /* Main.storyboard */,
 				83CC25D41FCC0F3B00C6F645 /* Info.plist */,
-				83CC25F61FCC10BB00C6F645 /* GoogleService-Info.plist */,
 				83CC25F71FCD667200C6F645 /* RealEstateApp-Bridging-Header.h */,
 			);
 			path = RealEstateApp;
@@ -177,6 +180,7 @@
 		83CC25FD1FCD6DC400C6F645 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				83CC26031FCE493900C6F645 /* RoundedCornerButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -322,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83CC25D31FCC0F3B00C6F645 /* LaunchScreen.storyboard in Resources */,
+				83CC26061FCE4ACA00C6F645 /* GoogleService-Info.plist in Resources */,
 				83CC25D01FCC0F3B00C6F645 /* Assets.xcassets in Resources */,
 				83CC25CE1FCC0F3B00C6F645 /* Main.storyboard in Resources */,
 			);
@@ -506,6 +511,7 @@
 			files = (
 				83CC26011FCE084300C6F645 /* RegisterViewController.swift in Sources */,
 				83CC25C91FCC0F3B00C6F645 /* AppDelegate.swift in Sources */,
+				83CC26041FCE493900C6F645 /* RoundedCornerButton.swift in Sources */,
 				83CC25FF1FCD6DED00C6F645 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
