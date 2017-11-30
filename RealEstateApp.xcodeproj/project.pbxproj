@@ -21,6 +21,8 @@
 		83CC26061FCE4ACA00C6F645 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83CC26051FCE4ACA00C6F645 /* GoogleService-Info.plist */; };
 		83CC26081FCEA4DD00C6F645 /* FirebaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC26071FCEA4DD00C6F645 /* FirebaseUser.swift */; };
 		83CC260A1FCEAD7700C6F645 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CC26091FCEAD7700C6F645 /* Settings.swift */; };
+		83CC26E11FD02DB700C6F645 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 83CC26DF1FD02DB700C6F645 /* ProgressHUD.bundle */; };
+		83CC26E21FD02DB700C6F645 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CC26E01FD02DB700C6F645 /* ProgressHUD.m */; };
 		B32499A2740AF8623FDBD47A /* Pods_RealEstateApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B9F2603EE211CF345DB1C5 /* Pods_RealEstateApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,9 @@
 		83CC26051FCE4ACA00C6F645 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		83CC26071FCEA4DD00C6F645 /* FirebaseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUser.swift; sourceTree = "<group>"; };
 		83CC26091FCEAD7700C6F645 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		83CC26DE1FD02DB700C6F645 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		83CC26DF1FD02DB700C6F645 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		83CC26E01FD02DB700C6F645 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		A1B9F2603EE211CF345DB1C5 /* Pods_RealEstateApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealEstateApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBAD0A33A9373ECC7D60C1AC /* Pods_RealEstateAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealEstateAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C621ACC99F51BD0C8DCD5B24 /* Pods-RealEstateAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealEstateAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealEstateAppUITests/Pods-RealEstateAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +145,7 @@
 				83CC25FD1FCD6DC400C6F645 /* View */,
 				83CC25FC1FCD6DBB00C6F645 /* Model */,
 				83CC25FB1FCD6DAF00C6F645 /* Controller */,
+				83CC26DD1FD02DB700C6F645 /* ProgressHUD */,
 				83CC25CC1FCC0F3B00C6F645 /* Main.storyboard */,
 				83CC25D41FCC0F3B00C6F645 /* Info.plist */,
 				83CC25F71FCD667200C6F645 /* RealEstateApp-Bridging-Header.h */,
@@ -199,6 +205,16 @@
 				83CC25D11FCC0F3B00C6F645 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83CC26DD1FD02DB700C6F645 /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				83CC26DE1FD02DB700C6F645 /* ProgressHUD.h */,
+				83CC26DF1FD02DB700C6F645 /* ProgressHUD.bundle */,
+				83CC26E01FD02DB700C6F645 /* ProgressHUD.m */,
+			);
+			path = ProgressHUD;
 			sourceTree = "<group>";
 		};
 		B62862976527C4EB7530E232 /* Pods */ = {
@@ -334,6 +350,7 @@
 				83CC25D31FCC0F3B00C6F645 /* LaunchScreen.storyboard in Resources */,
 				83CC26061FCE4ACA00C6F645 /* GoogleService-Info.plist in Resources */,
 				83CC25D01FCC0F3B00C6F645 /* Assets.xcassets in Resources */,
+				83CC26E11FD02DB700C6F645 /* ProgressHUD.bundle in Resources */,
 				83CC25CE1FCC0F3B00C6F645 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,6 +535,7 @@
 				83CC260A1FCEAD7700C6F645 /* Settings.swift in Sources */,
 				83CC26081FCEA4DD00C6F645 /* FirebaseUser.swift in Sources */,
 				83CC26011FCE084300C6F645 /* RegisterViewController.swift in Sources */,
+				83CC26E21FD02DB700C6F645 /* ProgressHUD.m in Sources */,
 				83CC25C91FCC0F3B00C6F645 /* AppDelegate.swift in Sources */,
 				83CC26041FCE493900C6F645 /* RoundedCornerButton.swift in Sources */,
 				83CC25FF1FCD6DED00C6F645 /* Constants.swift in Sources */,

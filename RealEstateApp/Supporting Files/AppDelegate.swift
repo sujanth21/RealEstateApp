@@ -27,6 +27,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         OneSignal.initWithLaunchOptions(launchOptions, appId: kONESIGNALAPPID, handleNotificationReceived: nil, handleNotificationAction: nil, settings: nil)
         
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            
+            if user != nil {
+                
+                if UserDefaults.standard.object(forKey: kCURRESNTUSER) != nil {
+                    DispatchQueue.main.async {
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UserDidLoginNotification"), object: nil, userInfo: ["userId": FirebaseUser.currentId()])
+                    }
+                }
+            }
+        }
+        
+        func onUserDidLogin(userId: String) {
+            startOneSignal()
+            
+        }
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "UserDidLoginNotification"), object: nil, queue: nil) { (note) in
+            
+            let userId = note.userInfo!["userId"] as! String
+            UserDefaults.standard.set(userId, forKey: "userId")
+            UserDefaults.standard.synchronize()
+            
+            onUserDidLogin(userId: userId)
+        }
+        
         if #available(iOS 10.0, *) {
             
             let center = UNUserNotificationCenter.current()
@@ -67,6 +93,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         
         print("Failed to register for user notifications")
+    }
+    
+    //MARK:- OneSignal
+    
+    func startOneSignal() {
+        
+        let status: OSPermissionSubscriptionState = OneSignal.getPermissionSubscriptionState()
+        let userId = status.subscriptionStatus.userId
+        let pushToken = status.subscriptionStatus.pushToken
+        
+        if pushToken != nil {
+            if let playerId = userId {
+                UserDefaults.standard.set(playerId, forKey: "OneSignalId")
+            } else {
+                UserDefaults.standard.removeObject(forKey: "OneSignalId")
+            }
+        }
+        
+        updateOneSignalId()
     }
 }
 
